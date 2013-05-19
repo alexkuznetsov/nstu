@@ -38,7 +38,7 @@ class Template {
 			ob_start();
 			extract($this->data);
 
-			require_once $this->fullPath;
+			include $this->fullPath;
 
 			return ob_get_clean();
 		}
